@@ -1,7 +1,5 @@
 package object;
 
-import object.Dog;
-
 public class Dog {
 	private final String nickname;
 	private int age;

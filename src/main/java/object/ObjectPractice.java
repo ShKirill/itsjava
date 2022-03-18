@@ -1,7 +1,7 @@
 package object;
 //package ru.itsjava.java_online.object;
 
-import object.Dog;
+//import object.Dog;
 
 public class ObjectPractice {
  
