@@ -23,7 +23,6 @@ public class ObjectPractice {
 		System.out.println("gurka.equals(murka): " + gurka.equals(murka));
  
 		System.out.println(gurka);
-		System.out.println("test111");
 	}
  
 }
