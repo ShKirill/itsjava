@@ -22,7 +22,7 @@ public class DogTest {
 		assertEquals(DEFAULT_AGE, dog.getAge());
 
 	}
-
+//	тест коммита
 	@DisplayName(" корректно изменять Dog")
 	@Test
 	public void shouldHaveCorrectUpdateDog() {
