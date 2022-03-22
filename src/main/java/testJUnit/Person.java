@@ -4,8 +4,9 @@ public class Person {
 	private String name;
 	private int age;
 
-	public Person() {
-
+	public Person(String name, int age) {
+		this.name= name;
+		this.age = age;
 	}
 
 	public void printAge() {
@@ -35,11 +36,10 @@ public class Person {
 	}
 
 	public boolean takeBeer() {
-    	boolean y = false;
-//    	this.age = age;
+		boolean y = false;
 //		который проверяет возраст и выдает true если возраст больше 18 и false в ином случае
 		if (age >= 18) {
-			 y = true;
+			y = true;
 		}
 		return y;
 	}
