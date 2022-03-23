@@ -5,12 +5,8 @@ public class Person {
 	private int age;
 
 	public Person(String name, int age) {
-		this.name= name;
+		this.name = name;
 		this.age = age;
-	}
-
-	public void printAge() {
-		System.out.println(age);
 	}
 
 	public String getName() {
@@ -31,7 +27,7 @@ public class Person {
 
 	public int birthday() {
 //    	который увеличивает возраст на 1
-		return age++;
+		return age = age + 1;
 
 	}
 

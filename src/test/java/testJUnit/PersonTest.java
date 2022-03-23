@@ -8,9 +8,12 @@ import org.junit.jupiter.api.Test;
 @DisplayName("Класс Person должен: ")
 public class PersonTest {
 	public static final String DEFAULT_NAME = "Петя";
-	public static final int DEFAULT_AGE = 16;
+	public static final int DEFAULT_AGE = 17;
 	public static final String NEW_NAME = "Вася";
 	public static final int NEW_AGE = 4;
+	public static final int DEFAULT_birthdayAGE = 18;
+	public static final boolean DEFAULT_AGEFORBEER = false;
+	public static final boolean DEFAULT_AGEFORBEER_afterBirthday = true;
 
 	@DisplayName(" корректно создаваться конструктором.")
 	@Test
@@ -32,6 +35,25 @@ public class PersonTest {
 
 		assertEquals(NEW_NAME, testPerson.getName());
 		assertEquals(NEW_AGE, testPerson.getAge());
+	}
+
+	@DisplayName(" корректно изменять Age после ДР")
+	@Test
+	public void shouldHaveCorrectUpdateBirthday() {
+		Person testPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
+
+		assertEquals(DEFAULT_birthdayAGE, testPerson.birthday());
+
+	}
+
+	@DisplayName(" корректно проверка разрешения на пиво")
+	@Test
+	public void shouldHaveCorrectAgeVerification() {
+		Person testPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
+
+		assertEquals(DEFAULT_AGEFORBEER, testPerson.takeBeer());
+		testPerson.birthday();
+		assertEquals(DEFAULT_AGEFORBEER_afterBirthday, testPerson.takeBeer());
 	}
 
 }

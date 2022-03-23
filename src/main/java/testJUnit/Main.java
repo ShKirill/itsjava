@@ -8,12 +8,9 @@ public class Main {
 
 		kirill.setAge(17);
 		System.out.println("Age: " + kirill.getAge());
-		System.out.println(kirill.takeBeer());
-
-		kirill.birthday();
-		System.out.println("Age: " + kirill.getAge());
-
-		System.out.println(kirill.takeBeer());
+		System.out.println("Можно бухать? " + kirill.takeBeer());
+		System.out.println("Age after birthday: " + kirill.birthday());
+		System.out.println("Можно бухать? " + kirill.takeBeer());
 
 	}
 
