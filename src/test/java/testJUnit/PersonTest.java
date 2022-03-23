@@ -1,5 +1,6 @@
 package testJUnit;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
@@ -20,8 +21,11 @@ public class PersonTest {
 	public void shouldHaveCorrectConstructor() {
 		Person testPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
 
-		assertEquals(DEFAULT_NAME, testPerson.getName());
-		assertEquals(DEFAULT_AGE, testPerson.getAge());
+//		assertEquals(DEFAULT_NAME, testPerson.getName());
+//		assertEquals(DEFAULT_AGE, testPerson.getAge());
+
+		assertAll("testPerson", () -> assertEquals(DEFAULT_NAME, testPerson.getName()),
+				() -> assertEquals(DEFAULT_AGE, testPerson.getAge()));
 
 	}
 
@@ -33,8 +37,10 @@ public class PersonTest {
 		testPerson.setName(NEW_NAME);
 		testPerson.setAge(NEW_AGE);
 
-		assertEquals(NEW_NAME, testPerson.getName());
-		assertEquals(NEW_AGE, testPerson.getAge());
+//		assertEquals(NEW_NAME, testPerson.getName());
+//		assertEquals(NEW_AGE, testPerson.getAge());
+		assertAll("testPerson", () -> assertEquals(NEW_NAME, testPerson.getName()),
+				() -> assertEquals(NEW_AGE, testPerson.getAge()));
 	}
 
 	@DisplayName(" корректно изменять Age после ДР")
