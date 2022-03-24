@@ -2,6 +2,8 @@ package Figure;
 
 public class Figure {
 
+	public static double PI = 3.1415926535;
+
 	public void area() {
 		System.out.println("Площадь");
 	}

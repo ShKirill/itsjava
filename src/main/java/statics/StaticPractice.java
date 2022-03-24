@@ -17,6 +17,15 @@ public class StaticPractice {
 		System.out.println("targetSalary = " + targetSalary.getFullSalary());
 
 		System.out.println("Salary.CEO = " + Salary.CEO);
+		System.out.println();
+
+		Car bmw = new Car("BMw", "Black");
+
+		System.out.println("Машина: " + bmw.getCompany() + " в цвете: " + bmw.getColor() + " стоит: " + bmw.getPrice());
+
+		Car lada = new Car("Lada Vesta", "Баклажан");
+
+		System.out.println("Машина: " + lada.getCompany() + " в цвете: " + lada.getColor() + " стоит: " + lada.getPrice());
 	}
 
 }
