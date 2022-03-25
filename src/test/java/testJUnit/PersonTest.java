@@ -61,5 +61,4 @@ public class PersonTest {
 		assertTrue(testPerson.takeBeer());
 		
 	}
-//	На 60 и 62 строке можно использовать assertTrue/assertFalse и передавать только метод takeBeer() 
 }
