@@ -2,6 +2,8 @@ package testJUnit;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,8 +15,6 @@ public class PersonTest {
 	public static final String NEW_NAME = "Вася";
 	public static final int NEW_AGE = 4;
 	public static final int DEFAULT_birthdayAGE = 18;
-	public static final boolean DEFAULT_AGEFORBEER = false;
-	public static final boolean DEFAULT_AGEFORBEER_afterBirthday = true;
 
 	@DisplayName(" корректно создаваться конструктором.")
 	@Test
@@ -52,14 +52,14 @@ public class PersonTest {
 
 	}
 
-	@DisplayName(" корректно проверка разрешения на пиво")
+	@DisplayName(" корректно проверять разрешение на пиво")
 	@Test
 	public void shouldHaveCorrectAgeVerification() {
 		Person testPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
-
-		assertEquals(DEFAULT_AGEFORBEER, testPerson.takeBeer());
+		assertFalse(testPerson.takeBeer());
 		testPerson.birthday();
-		assertEquals(DEFAULT_AGEFORBEER_afterBirthday, testPerson.takeBeer());
+		assertTrue(testPerson.takeBeer());
+		
 	}
-
+//	На 60 и 62 строке можно использовать assertTrue/assertFalse и передавать только метод takeBeer() 
 }
