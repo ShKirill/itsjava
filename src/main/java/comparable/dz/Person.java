@@ -13,7 +13,6 @@ public class Person implements Cloneable, Comparable<Person> {
 	@Override
 	public int compareTo(Person person) {
 		int result = 0;
-		boolean i = true;
 		if ((surname.equals(person.surname)) == true) {
 			result = 1;
 		} else if ((name.equals(person.name)) == true) {
@@ -34,5 +33,5 @@ public class Person implements Cloneable, Comparable<Person> {
 	public String toString() {
 		return "Person [name = " + name + ", surname = " + surname + ", age = " + age + "]";
 	}
-	
+
 }
