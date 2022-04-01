@@ -9,7 +9,7 @@ public class ComparableDz {
 		Person test2 = new Person("test2", "testis", 17);
 		Person test3 = new Person("test2", "testis", 57);
 		Person test4 = new Person("test4", "testis", 18);
-		Person test5 = new Person("test5", "testi1", 50);
+		Person test5 = new Person("test2", "testis", 17);
 
 		Person testClone = (Person) test3.clone();
 
@@ -19,6 +19,7 @@ public class ComparableDz {
 		System.out.println("CompareTo test1 - test5: " + test1.compareTo(test5));
 		System.out.println("CompareTo test1 - test2: " + test1.compareTo(test2));
 		System.out.println("CompareTo test2 - test3: " + test2.compareTo(test3));
+		System.out.println("CompareTo test2 - test5: " + test2.compareTo(test5));
 
 		System.out.println("CompareTo test3 - testClone: " + test3.compareTo(testClone));
 
