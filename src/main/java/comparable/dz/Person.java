@@ -19,11 +19,16 @@ public class Person implements Cloneable, Comparable<Person> {
 	@Override
 	public int compareTo(Person person) {
 
-		int result = this.surname.compareTo(person.surname); //	если фамилии одинаковые, 
+		int result = this.surname.compareTo(person.surname); //	если фамилии одинаковые
 		if (result == 0) {
-			result = this.name.compareTo(person.name);
+			result = this.name.compareTo(person.name); //	то по имени
 			if (result == 0) {
-				result = this.age - person.age;
+				result = this.age - person.age; //по возрасту
+				if (result < 0) {
+					result = -1;
+				} else if (result > 0) {
+					result = 1;
+				} 
 			}
 		}
 		return result;

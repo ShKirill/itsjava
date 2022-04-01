@@ -9,7 +9,7 @@ public class ComparableDz {
 		Person test2 = new Person("test2", "testis", 17);
 		Person test3 = new Person("test2", "testis", 57);
 		Person test4 = new Person("test4", "testis", 18);
-		Person test5 = new Person("test2", "testis", 17);
+		Person test5 = new Person("test2", "testis", 14);
 
 		Person testClone = (Person) test3.clone();
 
