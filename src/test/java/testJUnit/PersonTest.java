@@ -65,6 +65,6 @@ public class PersonTest {
 			testPerson.birthday();
 			assertTrue(testPerson.takeBeer());
 			});
-
+//test_pull
 	}
 }
