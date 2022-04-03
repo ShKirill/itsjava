@@ -56,9 +56,14 @@ public class PersonTest {
 	@Test
 	public void shouldHaveCorrectAgeVerification() {
 		Person testPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
-		assertFalse(testPerson.takeBeer());
-		testPerson.birthday();
-		assertTrue(testPerson.takeBeer());
-		
+//		assertFalse(testPerson.takeBeer());
+//		testPerson.birthday();
+//		assertTrue(testPerson.takeBeer());
+//		
+		assertAll("testPerson", () -> assertFalse(testPerson.takeBeer()), () -> {
+			testPerson.birthday();
+			assertTrue(testPerson.takeBeer());
+		});
+
 	}
 }
