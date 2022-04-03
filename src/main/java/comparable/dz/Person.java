@@ -10,18 +10,28 @@ public class Person implements Cloneable, Comparable<Person> {
 	private final String surname;
 	private final int age;
 
+//	2. Реализовать интерфейс Comparable. Реализовать метод compareTo(), 
+//	который будет сравнивать человека по фамилии, 
+//	если фамилии одинаковые, 
+//	то по имени, 
+//	в ином случае по возрасту.
+
 	@Override
 	public int compareTo(Person person) {
-		int result = 0;
-		if ((surname.equals(person.surname)) == true) {
-			result = 1;
-		} else if ((name.equals(person.name)) == true) {
-			result = 1;
-		} else if (age == person.age) {
-			result = 1;
+
+		int result = this.surname.compareTo(person.surname); //	если фамилии одинаковые
+		if (result == 0) {
+			result = this.name.compareTo(person.name); //	то по имени
+			if (result == 0) {
+				result = this.age - person.age; //по возрасту
+				if (result < 0) {
+					result = -1;
+				} else if (result > 0) {
+					result = 1;
+				} 
+			}
 		}
 		return result;
-
 	}
 
 	@Override
