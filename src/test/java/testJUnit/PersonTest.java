@@ -60,10 +60,11 @@ public class PersonTest {
 //		testPerson.birthday();
 //		assertTrue(testPerson.takeBeer());
 //		
-		assertAll("testPerson", () -> assertFalse(testPerson.takeBeer()), () -> {
+		assertAll("testPerson", () -> assertFalse(testPerson.takeBeer()), 
+			() -> {
 			testPerson.birthday();
 			assertTrue(testPerson.takeBeer());
-		});
+			});
 
 	}
 }
